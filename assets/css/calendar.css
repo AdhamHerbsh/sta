@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: system-ui;
+}
+header {
+    background-color: #fff;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    flex-direction: row;
+    width: 90%;
+}  
+nav img{
+    width: 250px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+ul li {
+    padding-right: 30px;
+}
+ul li a{
+    text-decoration: none;
+    color: #ed3636;
+    font-size: 16px;
+    font-weight: 500;
+}
+nav button {
+    border: 1px solid #ed3636;
+    outline: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #ed3636;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+nav button:hover{
+    background-color: #ed3636;
+    color: #fff;
+    border-color: none;
+    cursor: pointer;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.calendar{
+    padding-top: 60px;
+    padding-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 97%;
+}
+.calendar-heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #111;
+    color: #ebeced;
+}
+button{
+    padding: 5px 10px;
+    background-color: #ed3636;
+    color: #ebeced;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+    transition: 0.3s ;
+}
+table{
+    width: 100%;
+}
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+  th{
+    height: 50px;
+  }
+  tr{
+    border-right: none;
+  }
+  td{
+    height: 70px;
+    width: 100px;
+  }
+
+
+
+
+/*------------------------------ Footer -----------------------*/
+.start-footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 133px;
+    margin-top: 11px ;
+    padding-bottom: 25px;
+}
+
+
+.footer-details{
+  /* margin-left: 16px; */
+  margin-left: 15%;
+}
+
+.footer-logo{
+  display: flex;
+  flex-direction: column;
+}
+/* -------- Phone-------------- */
+.phone{
+  display: flex;
+  align-items: center;
+}
+
+.phone h2 b {
+  color: #ed3636;
+}
+
+.footer-details i.fa-solid.fa-phone{
+  font-size: 21px;
+  color: #ed3636;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+/* ----------Location ------------ */
+.location{
+  display: flex;
+  align-items: center;
+}
+
+.location h2 b {
+  color: #ed3636;
+}
+
+.footer-details i.fa-solid.fa-location-dot{
+  font-size: 21px;
+  color: #ed3636;
+  margin-left: 6px;
+  margin-right: 11px;
+}
+/* ----------Contact------------ */
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 13%;
+}
+.footer-contact input{
+    outline: none;
+    border: none;
+    width: 280px;
+    height: 31px;
+    border-bottom: 0.1px solid #b1acac;
+    transition: 0.3s;
+}
+.footer-contact input:focus{
+    border-bottom: #ed3636 solid 1px;
+}
+/* ---------------------- */
+
+/* ----------Submit Button------------ */
+.footer-contact a{
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  background: #ed3636;
+  text-align: center;
+  height: 27px;
+  font-family: cursive;
+  border-radius: 50px;
+  margin-top: 7px;
+}
+/* -------------------------Email---------------------------- */
+
+.Email{
+  display: flex;
+  align-items: center;
+}
+
+.Email h2 b {
+  color: #ed3636;
+}
+
+.footer-details i.fa-solid.fa-envelope{
+  font-size: 21px;
+  color: #ed3636;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+/* ----------- Logo ----------- */
+
+.footer-logo img{
+  width: 301px;
+  height: 66px;
+}
+.footer-logo h1{
+    text-align: center;
+    margin-top: 6px;
+    color: #ed3636;
+}
+/* End Footer */
+.end-footer{
+    width: 100%;
+    height: 30px;
+    background: #ed3636;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.sub-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.footer-phone{
+  display: flex;
+  align-items: baseline;
+}
+
+i.fa-solid.fa-phone{
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.footer-social{
+  margin-left: 7px;
+  font-size: 22px;
+}
+
+i.fa-brands.fa-facebook:hover{
+    font-size: 25px;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+i.fa-brands.fa-instagram:hover{
+  font-size: 25px;
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+.end-footer p {
+  font-size: 17px;
+  font-family: revert-layer;
+  font-weight: 700;
+}
+/* Footer */
+
+
+
+
+

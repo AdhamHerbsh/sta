@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STA | Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="vendor/aos/aos.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-grid.css" />
+    <link rel="shortcut icon" href="Images/logoSTA.png" type="image/x-icon">
+</head>
+  <body>
+      <!-- Start Nav -->
+      <header>
+          <div class="container">
+              <nav>
+                  <div class="logo">
+                      <a href=""><h2>STA</h2></a>
+                    </div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hostedAcademies.html">Hosted Academies</a></li>
+        </ul>
+    </nav>
+</div>
+</header>
+<!-- End Nav -->
+<!-- main -->
+    <main>
+      <!-- hero section -->
+      <section class="hero">
+        <div class="top">
+          <div class="title" data-aos="fade up">
+            <h1>HOME PAGE</h1>
+          </div>
+        </div>
+        <div class="center" >
+            
+          <div class="cardcontainer" data-aos="fade up">
+            <div class="card">
+              <div class="cardtop">
+                <h3>Slider Images</h3>
+              </div>
+              <div class="cardcenter">
+                <i class="bi-file-earmark-slides-fill" aria-hidden="true"></i>
+              </div>
+              <div class="cardbottom">
+                <button id="one" type="button" onclick="funedit('slider')">Edit <i class="bi-op"></i></button>
+            </div>
+            </div>
+            <div class="card">
+              <div class="cardtop"><h3>Insights</h3></div>
+              <div class="cardcenter">
+                <i class="bi-sort-numeric-down-alt" aria-hidden="true"></i>
+              </div>
+              <div class="cardbottom">
+                <button id="two" type="button" onclick="funedit('insights')">Edit <i class="bi-op"></i></button>
+            </div>
+        </div>
+   
+        <div class="card">
+            <div class="cardtop"><h3>About us</h3></div>
+            <div class="cardcenter">
+                <i class="bi-info-lg" aria-hidden="true"></i>
+            </div>
+            <div class="cardbottom">
+                  <button id="three" type="button" onclick="funedit('about')">Edit <i class="bi-op"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardtop"><h3>Fields</h3></div>
+                <div class="cardcenter">
+                    <i class="bi-intersect" aria-hidden="true"></i>
+                </div>
+                <div class="cardbottom">
+                  <button id="four" type="button" onclick="funedit('fields')">Edit <i class="bi-op"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+
+        </div>
+      </section>
+      <!-- end hero section -->
+        <!-- edit section -->
+        <section class="edit">
+
+          <div class="center">
+            <section class="slider" id="slider" data-aos="fade down">
+              <div class="top">
+                <div class="title">
+                  <h2>Slider</h2>
+                </div>
+                <div class="close">
+                  <button class="closebtn" onclick="closeedit('slider')">Close</button>
+                </div>
+              </div>
+              <div class="center">
+                <div class="container">
+                  <div class="data">
+  
+                  </div>
+                  <form action="php/insert.php" method="post">
+                    <div class="inputsContainer">
+                      <input
+                        type="text"
+                        name="nameImage"
+                        placeholder="Enter Name of Image"
+                      />
+                      <h4>Change Image:</h4>
+                      <label for="file-upload1" class="custom-file-upload">
+                        <i class="bi bi-cloud-arrow-up-fill h5"></i> Choose file
+                      </label>
+                      <input
+                        type="file"
+                        name="Contact_Icon_new"
+                        id="file-upload1"
+                        accept="image/*"
+                        onchange="document.getElementById('previewimage').src = window.URL.createObjectURL(this.files[0])"
+                      />
+                      <br />
+                      <h4>New Image:</h4>
+                      <img id="previewimage" alt="no image yet" />
+                      <br />
+                      <button class="editSubmit" type="submit" name="submit">
+                        Insert
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <section class="insights" id="insights" data-aos="fade down">
+              <div class="top">
+                <div class="title">
+                  <h2>Insights</h2>
+                </div>
+                <div class="close">
+                  <button class="closebtn" onclick="closeedit('insights')">Close</button>
+                </div>
+              </div>
+              <div class="center">
+                <div class="container">
+                  <form action="php/insert.php" method="post">
+                    <div class="inputsContainer">
+                      <input
+                        type="text"
+                        name="titleInsights"
+                        placeholder="Enter Title of Insight"
+                      />
+                      <h4>Change Icon:</h4>
+                      <label for="file-upload2" class="custom-file-upload">
+                        <i class="bi bi-cloud-arrow-up-fill h5"></i> Choose file
+                      </label>
+                      <input
+                        type="file"
+                        name="Contact_Icon_new"
+                        id="file-upload2"
+                        accept="image/*"
+                        onchange="document.getElementById('previewimage').src = window.URL.createObjectURL(this.files[0])"
+                      />
+                      <br />
+                      <button class="editSubmit" type="submit" name="submit">
+                        Insert
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <section class="about" id="about" data-aos="fade down" >
+              <div class="top">
+                <div class="title">
+                  <h2>About us</h2>
+                </div>
+                <div class="close">
+                  <button class="closebtn" onclick="closeedit('about')">Close</button>
+                </div>
+              </div>
+              <div class="center">
+                <div class="container">
+                  <form action="php/insert.php" method="post">
+                    <div class="inputsContainer">
+                      <textarea name="aboutParagaraph" id="" cols="30" rows="10"></textarea>
+                      <br />
+                      <button class="editSubmit" type="submit" name="submit">
+                        Insert
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <section class="fields" id="fields" data-aos="fade down">
+              <div class="top">
+                <div class="title">
+                  <h2>Felids</h2>
+                </div>
+                <div class="close">
+                  <button class="closebtn" onclick="closeedit('fields')">Close</button>
+                </div>
+              </div>
+              <div class="center">
+                <div class="container">
+                  <form action="php/insert.php" method="post">
+                    <div class="inputsContainer">
+                      <input
+                        type="text"
+                        name="nameCard"
+                        placeholder="Enter Tilte of Card"
+                      />
+                      <h4>Change Icon:</h4>
+                      <label for="file-upload3" class="custom-file-upload">
+                        <i class="bi bi-cloud-arrow-up-fill h5"></i> Choose file
+                      </label>
+                      <input
+                        type="file"
+                        name="Contact_Icon_new"
+                        id="file-upload3"
+                        accept="image/*"
+                        onchange="document.getElementById('previewimage').src = window.URL.createObjectURL(this.files[0])"
+                      />
+                      <br />
+                      <button class="editSubmit" type="submit" name="submit">
+                        Insert
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <section class="hostedVideo" id="hostedVideo" data-aos="fade down">
+              <div class="top">
+                <div class="title">
+                  <h2>Video of Hosted Page</h2>
+                </div>
+              </div>
+              <div class="center">
+                <div class="container">
+                  <form action="php/insert.php" method="post">
+                    <div class="inputsContainer">
+                      <input
+                        type="text"
+                        name="videoName"
+                        placeholder="Enter Name of Video"
+                      />
+                      <h4>Change Video:</h4>
+                      <label for="file-upload4" class="custom-file-upload">
+                        <i class="bi bi-cloud-arrow-up-fill h5"></i> Choose file
+                      </label>
+                      <input
+                        type="file"
+                        name="Contact_Icon_new"
+                        id="file-upload4"
+                        accept="image/*"
+                        onchange="document.getElementById('previewimage').src = window.URL.createObjectURL(this.files[0])"
+                      />
+                      <br />
+                      <button class="editSubmit" type="submit" name="submit">
+                        Insert
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <section class="academies" id="academies" data-aos="fade down">
+              <div class="top">
+                <div class="title">
+                  <h2>Academies</h2>
+                </div>
+              </div>
+              <div class="center">
+                <div class="container">
+                  <form action="php/insert.php" method="post">
+                    <div class="inputsContainer">
+                      <input
+                        type="text"
+                        name="location"
+                        placeholder="Enter Location"
+                      />
+                      <input
+                        type="number"
+                        name="locationUrl"
+                        placeholder="Enter Url of Location"
+                      />
+                      <h4>Change Image:</h4>
+                      <label for="file-upload5" class="custom-file-upload">
+                        <i class="bi bi-cloud-arrow-up-fill h5"></i> Choose file
+                      </label>
+                      <input
+                        type="file"
+                        name="Contact_Icon_new"
+                        id="file-upload5"
+                        accept="image/*"
+                        onchange="document.getElementById('previewimage').src = window.URL.createObjectURL(this.files[0])"
+                      />
+                      <br />
+                      <button class="editSubmit" type="submit" name="submit">
+                        Insert
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="bottom"></div>
+        </section>
+        <!-- end hero section -->
+
+
+
+    </main>
+    <!-- <div id="preloader"></div> -->
+    <script src="js/main.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

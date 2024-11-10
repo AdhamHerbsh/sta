@@ -1,0 +1,354 @@
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.shape {
+  position: relative;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  top: 20%;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+}
+.slidercontainer {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: absolute;
+}
+.slidercontainer .slidercard {
+  display: flex;
+  width: 90%;
+  height: 50vh;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px;
+  background: transparent;
+}
+.slidercontainer .slidercard .pinfo {
+  text-align: center;
+  align-items: center;
+  display: grid;
+  align-content: space-evenly;
+}
+.slidercontainer .slidercard .pinfo img {
+  width: 400px;
+  height: auto;
+}
+.slidercontainer .slidercard .pdetails {
+  width: 70%;
+}
+.slidercontainer .slidercard .pdetails span {
+  font-weight: 700;
+  animation: ease-in-out;
+  cursor: pointer;
+  padding: 5px 0;
+  margin: 10px;
+  transition: 0.5s;
+}
+.slidercontainer .slidercard .pdetails span:hover {
+  border-bottom: 3px solid #ed3636;
+  animation: ease-in-out;
+  transition: 0.5s;
+}
+.slidercontainer .slidercard .pdetails p {
+  position: relative;
+  padding: 5% 5% 0px 30%;
+  height: 90%;
+}
+
+.slidercontainer .slidercard .pdetails p br {
+  margin: 10px 0;
+}
+
+.slidercontrol {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  top: 50%;
+}
+.slidercontrol .space {
+  width: 100%;
+}
+.slidercontrol .btn {
+  text-align: center;
+}
+.slidercontrol .btn:hover {
+  color: #ed3636;
+}
+.slidercontrol .btn:last-child() {
+  float: right;
+}
+.slidercontrol .btn button {
+  border: none;
+  background: none;
+  font-size: 2em;
+}
+
+.brief {
+  height: 110vh;
+}
+.brief .container {
+  width: 100%;
+  display: flex;
+}
+
+.brief .container .part {
+  width: 50%;
+}
+.brief .container .p1 img {
+  width: 80%;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px #333;
+  height: 90%;
+}
+.part.p2 {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+.part.p2 h2 {
+  width: 50%;
+  margin: 0 auto;
+  color: #ed3636;
+  border-bottom: 5px solid #ed3636;
+  font-size: 2em;
+  font-weight: 700;
+}
+.part.p2 p {
+  margin: 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/* Landing */
+.main {
+  height: 100vh;
+  width: 100%;
+}
+section h1 {
+  text-align: center;
+  font-size: 4em;
+  font-weight: 700;
+}
+section .un-line {
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+  height: 0.3vh;
+  background-color: #ed3636;
+}
+.wrapper,
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+.slide {
+  overflow: hidden;
+}
+.slide::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+.slide .image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slide .image-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+}
+.image-data span.text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+.image-data h2 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #fff;
+}
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #333;
+  background: #fff;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+a.button:hover {
+  color: #fff;
+  background-color: #ed3636;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* swiper button css */
+.nav-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.nav-btn::before,
+.nav-btn::after {
+  font-size: 25px;
+  color: #000000;
+}
+.swiper-pagination-bullet {
+  opacity: 1;
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  visibility: hidden;
+}
+.swiper-pagination-bullet-active {
+  border: 2px solid #fff;
+  background-color: #c87e4f;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-btn {
+    visibility: hidden;
+  }
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+}
+.swiper-button-next:after {
+  content: "next" !important;
+  font-size: 25px !important;
+  margin-left: 4px !important;
+  font-weight: 900 !important;
+}
+.swiper-button-prev:after {
+  content: "prev" !important;
+  font-size: 25px !important;
+  margin-right: 4px !important;
+  font-weight: 900 !important;
+}
+.swiper-button-prev.nav-btn,
+.swiper-button-prev.nav-btn {
+  width: 40px;
+  height: 40px;
+}
+
+/* Landing */
+
+/*84448548484848444854848484844485484848484448548484848444854848484 84448548484848444854848484844485484848484448548484848444854848484  8444854848484 */
+.team {
+  text-align: center;
+  position: absolute;
+  top: 210%;
+}
+.cardcontainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+}
+
+.cardcontainer .teamcard {
+  margin: 5%;
+  padding: 60px 10px 30px;
+  border-radius: 20px;
+  z-index: 9999;
+  flex: 50%;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+
+  cursor: pointer;
+  user-select: none;
+  color: black;
+  transition: all 0.5s;
+}
+.cardcontainer .teamcard:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+.cardcontainer .teamcard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.cardcontainer .teamcard img {
+  width: 50%;
+}
+
+/* More Info About STA */
+.head {
+  display: flex;
+  justify-content: center;
+}
+.head h2 {
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #ed3636;
+  color: #fff;
+  font-weight: 700;
+}
+.head span {
+  background-color: #ed3636;
+  margin: auto 10px;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 800;
+}
+.head span:hover {
+  background-color: #971c1c;
+}
+.body {
+  text-align: center;
+  width: 50%;
+  margin: 2% auto;
+  font-size: 1.6em;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: #ed3636;
+  color: #fff;
+  animation: ease-in-out;
+}
+#more_info {
+  display: none;
+}
+
+/* More Info About STA */
+
+/* Our */
+.our {
+  display: flex;
+  justify-content: center;
+}
+.our .card {
+  width: 20%;
+  text-align: center;
+  padding: 50px 100px 10px;
+  margin: 20px;
+  height: auto;
+  border: 2px solid black;
+}
+
+/* Our */
